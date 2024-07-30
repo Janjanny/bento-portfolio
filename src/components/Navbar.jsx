@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const Navbar = () => {
 
     const [position, setPosition] = useState({
-        left: 60,
-        width: 150,
-        opacity: 1
+        left: 0,
+        width: 0,
+        opacity: 0
     })
 
   return (
     <div className='pt-8'>
-        <ul className='relative flex w-fit rounded-md border border-stroke-color bg-button-color text-white p-1 mx-auto'>
-        <Navs>Home</Navs>
-        <Navs>Projects</Navs>
-        <Navs>Contact</Navs>
+        <ul className='relative flex w-fit rounded-md border border-stroke-color bg-button-color text-white p-1 mx-auto' onMouseLeave={() => {setPosition((prv) => ({
+            ...prv,
+            opacity: 0
+        }))}}>
+        <Navs setPosition={setPosition}>Home</Navs>
+        <Navs setPosition={setPosition}>Projects</Navs>
+        <Navs setPosition={setPosition}>Contact</Navs>
 
         <Block position={position}/>
     </ul>
@@ -22,15 +25,27 @@ const Navbar = () => {
   )
 }
 
-const Navs = ({children}) => {
+const Navs = ({children, setPosition}) => {
+    const ref = useRef()
     return (
-        <li className='relative z-10 block cursor-pointer px-3 py-2 uppercase text-xs text-white '>{children}</li>
+        <li className='relative z-10 block cursor-pointer px-3 py-2 uppercase text-xs text-white ' ref={ref} onMouseEnter={() => {
+            if (!ref.current) return;
+
+            const {width} = ref.current.getBoundingClientRect();
+
+            setPosition({
+                width,
+                left: ref.current.offsetLeft,
+                opacity: 1,
+            })
+
+        }} >{children}</li>
     )
 }
 
 const Block = ({position}) => {
     return (
-        <motion.li className='absolute z-0 h-8 w-36 rounded bg-[#383838]' />
+        <motion.li className='absolute z-0 h-8 w-36 rounded bg-[#383838]' animate={position} />
     )
 }
 
