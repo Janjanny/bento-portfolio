@@ -1,7 +1,13 @@
+import Navbar from "./components/Navbar";
+import Home from "./page/Home";
+
 function App() {
   return (
     <>
-      <p className=" font-bold">Hello world</p>
+      <div className="w-full h-screen bg-bg-color text-white">
+        <Navbar/>
+        <Home/>
+      </div>
     </>
   );
 }
