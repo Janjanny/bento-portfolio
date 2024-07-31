@@ -7,6 +7,7 @@ import Home from "./page/Home.jsx";
 import Projects from "./page/Projects.jsx";
 import Contact from "./page/Contact.jsx";
 import Navbar from "./components/Navbar.jsx";
+import ErrorPage from "./page/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,17 +16,21 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home/>,
       },
       {
         path: "/projects",
-        element: <Projects/>
+        element: <Projects/>,
+
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact/>,
+
       }
-    ]
+    ],
+    errorElement: <ErrorPage/>
+
   }
 
 ])
