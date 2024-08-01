@@ -22,15 +22,15 @@ const Profile = () => {
         <div className="tags-div flex flex-wrap text-[10px] gap-[8px]">
             
             {tags.map((tag) => (
-                <div className=' bg-button-color px-[.5rem] py-[.2rem] rounded-xl cursor-default'>{tag}</div>
+                <div className=' bg-button-color px-[.5rem] py-[.2rem] rounded-xl cursor-default flex'><div className='w-2px h-2px bg-primary-color'></div>{tag}</div>
             ))}
 
         </div>
         <div className="button-div flex gap-2 text-center w-full justify-center items-center">
-            <div className=' bg-button-color text-sm w-full py-2 cursor-pointer rounded'>
+            <div className=' bg-button-color text-sm w-full py-2 cursor-pointer rounded border border-stroke-color'>
             <a href="/" target='_blank' >LinkedIn</a>
             </div>
-            <div className=' bg-button-color text-sm w-full py-2 cursor-pointer rounded'>
+            <div className=' bg-button-color text-sm w-full py-2 cursor-pointer rounded border border-stroke-color'>
             <a href="" >Resume</a>
             </div>
         </div>
