@@ -10,7 +10,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="pt-8 absolute left-[50%] translate-x-[-50%]">
+    <div className="pt-6 absolute left-[50%] translate-x-[-50%]">
       <ul
         className="relative flex w-fit rounded-md border border-stroke-color bg-button-color text-white p-1 mx-auto"
         onMouseLeave={() => {

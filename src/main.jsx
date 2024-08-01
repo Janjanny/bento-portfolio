@@ -6,7 +6,6 @@ import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router
 import Home from "./page/Home.jsx";
 import Projects from "./page/Projects.jsx";
 import Contact from "./page/Contact.jsx";
-import Navbar from "./components/Navbar.jsx";
 import ErrorPage from "./page/ErrorPage.jsx";
 
 const router = createBrowserRouter([
