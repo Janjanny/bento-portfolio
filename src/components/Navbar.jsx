@@ -48,7 +48,9 @@ const Navs = ({ children, setPosition }) => {
         });
       }}
     >
-      <Link to={`${children == "Home" ? "/" : `/${children.toLowerCase()}`}`}>{children}</Link>
+      <Link to={`${children == "Home" ? "/" : `/${children.toLowerCase()}`}`}>
+        {children}
+      </Link>
     </li>
   );
 };
