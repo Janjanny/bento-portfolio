@@ -58,7 +58,7 @@ const Navs = ({ children, setPosition }) => {
 const Block = ({ position }) => {
   return (
     <motion.li
-      className="absolute z-0 h-8 w-36 rounded bg-[#383838]"
+      className="absolute z-0 h-8 w-36 rounded bg-[#383838] opacity-0"
       animate={position}
     />
   );
