@@ -17,7 +17,7 @@ const WorkExperience = () => {
 
   return (
     <div className="w-full h-full">
-      <p className=" text-base font-medium">Work Experience</p>
+      <p className=" text-base font-[600]">Work Experience</p>
 
       <div className="experiences ">
         <div className="work text-sm text-start">

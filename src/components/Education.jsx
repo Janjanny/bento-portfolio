@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 const Education = () => {
   return (
     <div className="w-full h-full flex flex-col gap-2">
-      <p className=" font-medium text-base">Education</p>
+      <p className=" text-base font-[600]">Education</p>
 
       <div className="school text-xs flex flex-col gap-[.10rem]">
         <a

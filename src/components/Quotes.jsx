@@ -2,9 +2,9 @@ import React from "react";
 
 const Quotes = () => {
   return (
-    <div className=" w-full h-full flex justify-center items-center text-center text-sm italic">
+    <div className=" w-full h-full flex justify-center items-center text-center text-base italic">
       {" "}
-      <p>“It is better to conquer self than to win a thousand battles.“</p>
+      <p>“Chop wood, carry water.“</p>
     </div>
   );
 };

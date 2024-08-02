@@ -3,6 +3,7 @@ import { IconContext } from "react-icons";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdPhoneAndroid } from "react-icons/md";
 import { GrGithub } from "react-icons/gr";
+import { FaCircle } from "react-icons/fa";
 const Profile = () => {
   const tags = [
     "Graphics Designer",
@@ -14,8 +15,8 @@ const Profile = () => {
   return (
     <div className="w-full h-full flex flex-col justify-between gap-[.7rem]">
       <div className="profile-div flex gap-[1rem]">
-        <div className="picture-div bg-button-color w-[6.5rem] h-[6.5rem] rounded "></div>
-        <div className="name-div pt-[8px] font-medium">
+        <div className="picture-div bg-button-color w-[6.5rem] h-[6.5rem] rounded-md border border-primary-color"></div>
+        <div className="name-div pt-[8px] font-[600]">
           <p>Chris Jan Beboso</p>
           <div className="flex flex-col font-normal text-xs gap-[6px] mt-[8px] ">
             <p className="flex gap-2">
@@ -58,19 +59,23 @@ const Profile = () => {
 
       <div className="tags-div flex flex-wrap text-[10px] gap-[8px]">
         {tags.map((tag) => (
-          <div className=" bg-button-color px-[.5rem] py-[.2rem] rounded-xl cursor-default flex">
-            <div className="w-2px h-2px bg-primary-color"></div>
+          <div className=" bg-button-color px-[.5rem] py-[.2rem] rounded-xl cursor-default flex items-center gap-1">
+            <span><IconContext.Provider
+                  value={{ size: ".6rem", color: "#9887EB" }}
+                >
+                  <FaCircle />
+                </IconContext.Provider></span>
             {tag}
           </div>
         ))}
       </div>
       <div className="button-div flex gap-2 text-center w-full justify-center items-center">
-        <div className=" bg-button-color text-sm w-full py-2 cursor-pointer rounded border border-stroke-color">
+        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color  hover:shadow hover:shadow-primary-color hover:border-primary-color">
           <a href="/" target="_blank">
             LinkedIn
           </a>
         </div>
-        <div className=" bg-button-color text-sm w-full py-2 cursor-pointer rounded border border-stroke-color">
+        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color hover:border-primary-color hover:shadow hover:shadow-primary-color transition-all ease-in-out">
           <a href="">Resume</a>
         </div>
       </div>
