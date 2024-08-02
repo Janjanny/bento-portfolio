@@ -15,9 +15,6 @@ const WorkExperience = () => {
       jobDescription:
         "Worked as a Freelance Graphics Designer focusing in Clothing Designs and Branding.",
     },
-
-    
-  
   ];
 
   return (
@@ -48,16 +45,15 @@ const Work = ({ jobTitle, jobDate, jobDescription, index, arrayLength }) => {
         <IconContext.Provider value={{ size: ".6rem", color: "#9887EB" }}>
           <FaCircle />
         </IconContext.Provider>
-        <div className={`vertical-line h-full w-[1px] ${index == arrayLength - 1 ? " bg-gradient-to-b from-primary-color to-transparent" : "bg-primary-color"} absolute left-[4px]`}/>
+        <div
+          className={`vertical-line h-full w-[1px] ${index == arrayLength - 1 ? " bg-gradient-to-b from-primary-color to-transparent" : "bg-primary-color"} absolute left-[4px]`}
+        />
       </div>
-      <p className="job-title  text-primary-color font-[600]">
-        {jobTitle}
-      </p>
+      <p className="job-title  text-primary-color font-[600]">{jobTitle}</p>
       <p className="job-date text-xs font-light">{jobDate}</p>
       <p className="job-description text-xs font-light mt-[.5rem] pb-[1.5rem]">
         {jobDescription}
       </p>
-      
     </div>
   );
 };

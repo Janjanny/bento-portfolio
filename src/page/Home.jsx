@@ -21,7 +21,7 @@ const Home = () => {
             <Profile />
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-2 row-span-4 p-[.8rem]">
-          <TechSkills/>
+            <TechSkills />
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-3 row-span-2 p-[1.2rem]">
             <Quotes />
