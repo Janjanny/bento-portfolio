@@ -15,13 +15,16 @@ const WorkExperience = () => {
       jobDescription:
         "Worked as a Freelance Graphics Designer focusing in Clothing Designs and Branding.",
     },
+
+    
+  
   ];
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full  overflow-hidden">
       <p className=" text-base font-[600] mb-[1rem]">Work Experience</p>
 
-      <div className="experiences ">
+      <div className="experiences flex flex-col ">
         <div className="work text-sm text-start cursor-default">
           {workList.map((work, key) => (
             <Work
@@ -45,7 +48,7 @@ const Work = ({ jobTitle, jobDate, jobDescription, index, arrayLength }) => {
         <IconContext.Provider value={{ size: ".6rem", color: "#9887EB" }}>
           <FaCircle />
         </IconContext.Provider>
-        <div className={`vertical-line h-full border-l ${index == arrayLength ? " border-primary-color via-transparent" : "border-primary-color"} absolute left-[4px]`}/>
+        <div className={`vertical-line h-full w-[1px] ${index == arrayLength - 1 ? " bg-gradient-to-b from-primary-color to-transparent" : "bg-primary-color"} absolute left-[4px]`}/>
       </div>
       <p className="job-title  text-primary-color font-[600]">
         {jobTitle}

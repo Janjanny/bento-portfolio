@@ -17,7 +17,7 @@ const Profile = () => {
       <div className="profile-div flex gap-[1rem]">
         <div className="picture-div bg-button-color w-[6.5rem] h-[6.5rem] rounded-md border border-primary-color"></div>
         <div className="name-div pt-[8px] font-[600]">
-          <p>Chris Jan Beboso</p>
+          <p className=" text-xl">Chris Jan Beboso</p>
           <div className="flex flex-col font-normal text-xs gap-[6px] mt-[8px] ">
             <p className="flex gap-2">
               <span>
