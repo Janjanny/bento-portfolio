@@ -2,6 +2,8 @@ import React from "react";
 import WorkExperience from "../components/WorkExperience";
 import AboutMe from "../components/AboutMe";
 import Profile from "../components/Profile";
+import Quotes from "../components/Quotes";
+import Education from "../components/Education";
 
 const Home = () => {
   return (
@@ -15,16 +17,16 @@ const Home = () => {
             <AboutMe />
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-5 row-span-4 p-[1.2rem]">
-            <Profile/>
+            <Profile />
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-2 row-span-4 p-[1.2rem]">
             Technical Skills
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-3 row-span-2 p-[1.2rem]">
-            Quote
+            <Quotes />
           </div>
           <div className=" bg-grid-color border border-stroke-color rounded-md col-span-7 row-span-2 p-[1.2rem]">
-            Education
+            <Education />
           </div>
         </div>
       </div>
