@@ -60,11 +60,11 @@ const Profile = () => {
       <div className="tags-div flex flex-wrap text-[10px] gap-[8px]">
         {tags.map((tag) => (
           <div className=" bg-button-color px-[.5rem] py-[.2rem] rounded-xl cursor-default flex items-center gap-1">
-            <span><IconContext.Provider
-                  value={{ size: ".6rem", color: "#9887EB" }}
-                >
-                  <FaCircle />
-                </IconContext.Provider></span>
+            <span>
+              <IconContext.Provider value={{ size: ".6rem", color: "#9887EB" }}>
+                <FaCircle />
+              </IconContext.Provider>
+            </span>
             {tag}
           </div>
         ))}

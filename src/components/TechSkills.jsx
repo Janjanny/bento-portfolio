@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const TechSkills = () => {
-  return (
-    <div>TechSkills</div>
-  )
-}
+  return <div>TechSkills</div>;
+};
 
-export default TechSkills
+export default TechSkills;

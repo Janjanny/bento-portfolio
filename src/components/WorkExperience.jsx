@@ -1,11 +1,13 @@
 import React from "react";
+import { IconContext } from "react-icons";
+import { FaCircle } from "react-icons/fa6";
 
 const WorkExperience = () => {
   const workList = [
     {
-      jobTitle: "IT Application Support",
+      jobTitle: "IT App Support",
       jobDate: "Feb. 2024 - Present",
-      jobDescription: "Provided L1 support for ERP Systems and POS Systems",
+      jobDescription: "Provided L1 support for ERP System and POS System.",
     },
     {
       jobTitle: "Graphics Designer",
@@ -17,15 +19,17 @@ const WorkExperience = () => {
 
   return (
     <div className="w-full h-full">
-      <p className=" text-base font-[600]">Work Experience</p>
+      <p className=" text-base font-[600] mb-[1rem]">Work Experience</p>
 
       <div className="experiences ">
-        <div className="work text-sm text-start">
-          {workList.map((work) => (
+        <div className="work text-sm text-start cursor-default">
+          {workList.map((work, key) => (
             <Work
               jobTitle={work.jobTitle}
               jobDate={work.jobDate}
               jobDescription={work.jobDescription}
+              index={key}
+              arrayLength={workList.length}
             />
           ))}
         </div>
@@ -34,15 +38,24 @@ const WorkExperience = () => {
   );
 };
 
-const Work = ({ jobTitle, jobDate, jobDescription }) => {
+const Work = ({ jobTitle, jobDate, jobDescription, index, arrayLength }) => {
   return (
-    <>
-      <p className="job-title mt-[1.5rem]">{jobTitle}</p>
+    <div className="relative pl-4 h-max ">
+      <div className="line absolute left-0 mt-[.35rem] h-full flex ">
+        <IconContext.Provider value={{ size: ".6rem", color: "#9887EB" }}>
+          <FaCircle />
+        </IconContext.Provider>
+        <div className={`vertical-line h-full border-l ${index == arrayLength ? " border-primary-color via-transparent" : "border-primary-color"} absolute left-[4px]`}/>
+      </div>
+      <p className="job-title  text-primary-color font-[600]">
+        {jobTitle}
+      </p>
       <p className="job-date text-xs font-light">{jobDate}</p>
-      <p className="job-description text-xs font-light mt-[.8rem]">
+      <p className="job-description text-xs font-light mt-[.5rem] pb-[1.5rem]">
         {jobDescription}
       </p>
-    </>
+      
+    </div>
   );
 };
 

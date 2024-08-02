@@ -20,10 +20,10 @@ const Education = () => {
             </IconContext.Provider>
           </span>
         </a>
-        <p className=" font-normal">
+        <p className=" font-normal cursor-default">
           Bachelor of Science in Computer Engineering
         </p>
-        <p className="italic">Jun. 2019 - Oct. 2023</p>
+        <p className="italic cursor-default">Jun. 2019 - Oct. 2023</p>
       </div>
     </div>
   );
