@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: { sans: ["Poppins", "sans-serif"] },
       colors: {
-        white: "#FFFFFF",
+        white: "#E0E0E0",
         "grid-color": "#101010",
         "bg-color": "#050505",
         "button-color": "#191919",

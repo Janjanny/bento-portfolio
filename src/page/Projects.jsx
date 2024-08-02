@@ -16,8 +16,10 @@ const Projects = () => {
   return (
     <>
       <div className="w-full h-screen bg-bg-color text-white flex justify-center pt-[8rem] ">
-        <div className="w-[48rem] grid grid-cols-1">
+        <div className="w-[48rem] flex flex-col gap-[1rem]">
         <ProjectCard/>
+        <ProjectCard/>
+
         </div>
       </div>
     </>
