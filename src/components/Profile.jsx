@@ -70,12 +70,12 @@ const Profile = () => {
         ))}
       </div>
       <div className="button-div flex gap-2 text-center w-full justify-center items-center">
-        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color  hover:shadow hover:shadow-primary-color hover:border-primary-color">
+        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color  hover:shadow hover:shadow-primary-color hover:border-primary-color transition-all ease-in-out active:bg-[#383838]">
           <a href="/" target="_blank">
             LinkedIn
           </a>
         </div>
-        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color hover:border-primary-color hover:shadow hover:shadow-primary-color transition-all ease-in-out">
+        <div className=" bg-button-color text-xs w-full py-2 cursor-pointer rounded border border-stroke-color hover:border-primary-color hover:shadow hover:shadow-primary-color transition-all ease-in-out active:bg-[#383838]">
           <a href="">Resume</a>
         </div>
       </div>

@@ -41,30 +41,32 @@ const TechSkills = () => {
   ];
 
   return (
-    <div className="w-full h-full overflow-hidden ">
+    <div className=" w-full h-full overflow-hidden ">
       <p className=" text-center font-[600]">Tech Skills</p>
 
-      <div className=" h-full flex flex-col gap-2 mt-[.8rem] cursor-default overflow-auto no-scrollbar">
+      <div className=" relative h-full flex flex-col gap-2 mt-[.8rem] cursor-default overflow-auto no-scrollbar ">
+      <div className="absolute bg-gradient-to-b h-full w-full top-0 from-transparent via-transparent to-grid-color">
+      </div>
+
         {skillSets.map((skill, key) => (
-          <SkillCard key={key} img={skill.img} name={skill.name}/>
+          <SkillCard key={key} img={skill.img} name={skill.name} />
         ))}
       </div>
     </div>
   );
 };
 
-
-const SkillCard = ({img, name}) => {
-  return(
+const SkillCard = ({ img, name }) => {
+  return (
     <div className="w-full flex items-center justify-between bg-button-color p-1.5 rounded border border-button-color hover:border-primary-color">
-    <div className="w-[2rem] h-[2rem] overflow-hidden rounded-md flex justify-center items-center">
-      <img src={img} alt="" className=" " />
+      <div className="w-[2rem] h-[2rem] overflow-hidden rounded-md flex justify-center items-center">
+        <img src={img} alt="" className=" " />
+      </div>
+      <div className="w-full text-center">
+        <p className="text-xs">{name}</p>
+      </div>
     </div>
-    <div className="w-full text-center">
-    <p className="text-xs">{name}</p>
-    </div>
-  </div>
-  )
-}
+  );
+};
 
 export default TechSkills;
