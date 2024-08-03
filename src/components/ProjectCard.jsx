@@ -18,8 +18,8 @@ const ProjectCard = ({ img, title, desc, githubLink, projectLink, icons }) => {
             <p className=" font-[600] text-lg">{title}</p>
             <div className="flex gap-2 justify-end items-center">
               {icons.map((icon) => (
-                <div className="w-[20px] h-[20px] bg-white rounded">
-                  <img src="" alt="" />
+                <div className="w-[18px] h-[18px] overflow-hidden rounded">
+                  <img src={icon} alt="_icon" className=" object-contain" />
                 </div>
               ))}
             </div>

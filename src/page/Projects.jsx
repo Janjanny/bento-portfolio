@@ -22,6 +22,11 @@ const Projects = () => {
       desc: "A cryptocurrency search website powered by the Coingecko API, developed with React JS, Axios, and styled using Tailwind CSS.",
       githubLink: "https://github.com/Janjanny/coin-check",
       websiteLink: "https://coin-check-smoky.vercel.app/",
+      icons: [
+        "src/assets/react-logo.png",
+        "src/assets/tailwind-logo.png",
+        "src/assets/axios.png",
+      ],
     },
 
     {
@@ -30,6 +35,11 @@ const Projects = () => {
       desc: "A bookmark website developed with React.js, Tailwind CSS, and GSAP, utilizing localStorage for data storage.",
       githubLink: "https://github.com/Janjanny/link-app-react",
       websiteLink: "https://links-app-react.vercel.app/",
+      icons: [
+        "src/assets/react-logo.png",
+        "src/assets/tailwind-logo.png",
+        "src/assets/gsap.png",
+      ],
     },
 
     {
@@ -38,6 +48,11 @@ const Projects = () => {
       desc: "A quiz website implemented with ReactJS and Material UI, utilizing the Trivia API for questions and data.",
       githubLink: "https://github.com/Janjanny/Quiz-io",
       websiteLink: "https://quiz-io-nu.vercel.app/",
+      icons: [
+        "src/assets/react-logo.png",
+        "src/assets/mui-logo.png",
+        "src/assets/js-logo.png",
+      ],
     },
   ];
 
