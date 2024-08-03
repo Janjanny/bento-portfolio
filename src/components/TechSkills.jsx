@@ -45,8 +45,7 @@ const TechSkills = () => {
       <p className=" text-center font-[600]">Tech Skills</p>
 
       <div className=" relative h-full flex flex-col gap-2 mt-[.8rem] cursor-default overflow-auto no-scrollbar ">
-      <div className="absolute bg-gradient-to-b h-full w-full top-0 from-transparent via-transparent to-grid-color">
-      </div>
+        <div className="absolute bg-gradient-to-b h-full w-full top-0 from-transparent via-transparent to-grid-color"></div>
 
         {skillSets.map((skill, key) => (
           <SkillCard key={key} img={skill.img} name={skill.name} />
